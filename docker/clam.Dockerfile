@@ -15,7 +15,7 @@ RUN apt-get install -yqq clang-format
 
 ARG BRANCH=master
 RUN cd / && rm -rf /clam && \
-    git clone https://github.com/seahorn/crab-llvm -b $BRANCH clam --depth=10 ; \
+    git clone https://github.com/kamilababayeva/clam.git -b $BRANCH clam --depth=10 ; \
     mkdir -p /clam/build
 WORKDIR /clam/build
 

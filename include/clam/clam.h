@@ -40,12 +40,15 @@ extern void *nd_voidp(void) __attribute__((malloc));
 extern bool sea_is_dereferenceable(const void *ptr, intptr_t offset);
 /* Print invariants projected onto specific variables */
 extern void __CRAB_intrinsic_print_invariants(int,...);
+/* Print invariants projected onto specific variables */
+//  extern void __CRAB_intrinsic_print_invariants_to_variables(int,...);
 /* Enable disjunctive invariants based on the values on the variable */  
 extern void __CRAB_intrinsic_value_partition_start(int,...);
 /* Disable disjunctive invariants based on the values on the variable */    
 extern void __CRAB_intrinsic_value_partition_end(int,...);
 
 #define CRAB_PRINT_INVARIANTS __CRAB_intrinsic_print_invariants  
+// #define CRAB_PRINT_INVARIANTS_TO_VARIABLES __CRAB_intrinsic_print_invariants_to_variables
 #define CRAB_VALUE_PARTITION_START __CRAB_intrinsic_value_partition_start
 #define CRAB_VALUE_PARTITION_END __CRAB_intrinsic_value_partition_end
 
